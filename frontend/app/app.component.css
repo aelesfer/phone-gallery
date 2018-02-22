@@ -1,0 +1,10 @@
+:host {
+  background-image: url("https://marketingland.com/wp-content/ml-loads/2016/11/happy_people_230273494-ss-1920.jpg");
+  height: 100%;
+  display: block;
+  padding: 0 10px;
+}
+
+.header {
+  font-size: 20px;
+}

@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  --background-highlight: rgba(70, 70, 70, 0.9);
+  --background: rgba(107, 97, 97, 0.64);
+  --font-color: #FFFFFF;
+}
+a, span, label, div, header {
+  color: var(--font-color);
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.label {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--background-highlight);
+  text-align: center;
+  flex: 1 1 100%;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.panel {
+  background-color: var(--background);
+  margin-top: 10px;
+  flex-flow: row wrap;
+}
