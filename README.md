@@ -8,7 +8,7 @@ Some design decisions are inherited from the test requirements.
 
 ### Installation
 
-Run `npm install` after you clone this repo to install depencencies of both Front and Back apps. 
+Run `npm install` after you clone this repo to install depencencies of both Front and Back apps. Depending on your enviroment, you might need to globally install `@angular/cli`.
 
 ## Local server with hot code swap
 
