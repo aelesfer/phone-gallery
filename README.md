@@ -4,16 +4,53 @@ Sample project made for an interview test.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli), but its scaffolding was customized in the likes of the developer.
 Some design decisions are inherited from the test requirements.
 
-## Local development
+## Prerequisites
 
-### Installation
+1. Install node
+2. Install globally `@angular/cli nodemon` for local development
+3. Install docker for dockerized development/deployment
 
-Run `npm install` after you clone this repo to install depencencies of both Front and Back apps. Depending on your enviroment, you might need to globally install `@angular/cli`.
+## Installation
+
+Avoid this step if using Docker.
+
+```bash
+git clone https://github.com/aelesfer/phone-gallery
+cd \phone-gallery\
+cd .\backend\
+npm i
+cd ..
+cd .\frontend\
+npm i
+```
+
+## Docker development
+
+Easilly start your local enviroment using Docker Compose.
+
+```bash
+docker-compose up
+```
 
 ## Local server with hot code swap
 
-Run `npm run start` to start the local server. The backend will be avaliable at `http://localhost:4100/` and the frontend at `http://localhost:4200/`. Thanks to ng-cli, this app will automatically reload if you change any of the source files.
+If docker is not used, you need to execute two terminals or use `concurrently` to execute frontend and backend commands at same time.
+
+```bash
+cd .\frontend\
+ng serve
+```
+
+```bash
+cd .\backend\
+npm start
+```
 
 ## Build
 
 Run `ng build` to build the front project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+```bash
+cd .\frontend\
+ng build --prod
+```

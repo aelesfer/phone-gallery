@@ -5,7 +5,7 @@ var fs = require('fs');
 var Phone = require('./phone.model');
 
 exports.list_all_phones = function(req, res) {
-  fs.readFile('./backend/phone.mock.json', 'utf8', function(err, data) {
+  fs.readFile('./phone.mock.json', 'utf8', function(err, data) {
     res.setHeader('Content-Type', 'application/json');
     if (err) {
       res.status(500).send(err);
