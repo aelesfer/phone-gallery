@@ -1,4 +1,41 @@
 :host {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+}
+
+.side-nav {
+  flex: 1;
+  min-width: 400px;;
+  background: var(--color-main);
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.side-nav .title {
+  font-size: 60px;
+  flex: 1;
+  margin: 30px 0 60px 0;
+  background: var(--color-special);
+  padding: 20px 40px;
+  font-family: monospace;
+}
+.side-nav .title span {
+  font-size: 25px;
+}
+.side-nav .desc {
+  padding: 0 50px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.content {
+  flex: 5;
+  background: var(--color-secundary);
+}
+
+/* :host {
   background-image: url("https://marketingland.com/wp-content/ml-loads/2016/11/happy_people_230273494-ss-1920.jpg");
   height: 100%;
   display: block;
@@ -7,4 +44,4 @@
 
 .header {
   font-size: 20px;
-}
+} */

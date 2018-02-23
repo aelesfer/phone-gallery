@@ -2,14 +2,16 @@
 html, body {
   height: 100%;
   margin: 0;
-  --background-highlight: rgba(70, 70, 70, 0.9);
-  --background: rgba(107, 97, 97, 0.64);
-  --font-color: #FFFFFF;
+  --color-main: #1B2F47;
+  --color-secundary: #476A94;
+  --color-highlight: #FFFFFF;
+  --color-special: #8DA9AB;
+  --font-color: #E0E0E8;
 }
-a, span, label, div, header {
-  color: var(--font-color);
+a, span, label, div, header, article {
+  color: var(--color-highlight);
   font-size: 16px;
-  font-family: monospace;
+
 }
 
 .label {

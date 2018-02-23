@@ -6,8 +6,16 @@ import { Phone } from '../../model/phone.model';
 
 @Component({
   selector: 'pg-list-container',
-  templateUrl: './phone-list.component.html',
-  styleUrls: ['./phone-list.component.css']
+  template: `<pg-detail *ngFor="let phone of phones$ | async" [phone]="phone"></pg-detail>`,
+  styles: [`
+    :host {
+      display: flex;
+      flex-flow: row wrap;
+      overflow-y: scroll;
+      height: 100%;
+      justify-content: center;
+    }
+  `]
 })
 export class PhoneListComponent implements OnInit {
   phones$: Observable<Phone[]>;

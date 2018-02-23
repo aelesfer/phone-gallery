@@ -1,3 +1,4 @@
+import { PhoneDetailComponent } from './components/phone-detail/phone-detail.component';
 import { PhoneEffects } from './store/phone.effects';
 import { PhoneListComponent } from './components/phone-list-container/phone-list.component';
 import { PhonesRoutes } from './phones.routes';
@@ -13,7 +14,8 @@ import { EffectsModule } from '@ngrx/effects';
     EffectsModule.forRoot([PhoneEffects])
   ],
   declarations: [
-    PhoneListComponent],
+    PhoneListComponent,
+    PhoneDetailComponent],
   providers: []
 })
 export class PhonesModule {}
