@@ -1,22 +1,29 @@
+import { PhonesService } from './phones/services/phones.services';
+import { PhoneStoreService } from './phones/services/phone-store.service';
+import { RouterModule } from '@angular/router';
+import { phoneReducer } from './phones/store/phone.reducer';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
-import { PhoneListComponent } from './phone-list/phone-list.component';
-
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PhoneDetailComponent,
-    PhoneListComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    StoreModule.forRoot({phones: phoneReducer}),
+    RouterModule.forRoot([
+      { path: 'phones', loadChildren: 'app/phones/phones.module#PhonesModule' },
+      { path: '', pathMatch: 'full', redirectTo: 'phones' }
+  ])
   ],
-  providers: [],
+  providers: [
+    PhoneStoreService,
+    PhonesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
