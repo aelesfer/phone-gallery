@@ -1,3 +1,4 @@
+import { SpinnerComponent } from './phones/components/spinner/spinner.component';
 import { PhonesService } from './phones/services/phones.services';
 import { PhoneStoreService } from './phones/services/phone-store.service';
 import { RouterModule } from '@angular/router';

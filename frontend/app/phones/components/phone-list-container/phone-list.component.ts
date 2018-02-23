@@ -6,7 +6,9 @@ import { Phone } from '../../model/phone.model';
 
 @Component({
   selector: 'pg-list-container',
-  template: `<pg-detail *ngFor="let phone of phones$ | async" [phone]="phone"></pg-detail>`,
+  template: `
+    <pg-detail *ngFor="let phone of phones$ | async" [phone]="phone"></pg-detail>
+    <pg-spinner></pg-spinner>`,
   styles: [`
     :host {
       display: flex;
@@ -14,6 +16,9 @@ import { Phone } from '../../model/phone.model';
       overflow-y: scroll;
       height: 100%;
       justify-content: center;
+    }
+    pg-detail + pg-spinner {
+      display: none;
     }
   `]
 })

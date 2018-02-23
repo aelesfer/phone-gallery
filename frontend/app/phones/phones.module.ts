@@ -1,3 +1,4 @@
+import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PhoneDetailComponent } from './components/phone-detail/phone-detail.component';
 import { PhoneEffects } from './store/phone.effects';
 import { PhoneListComponent } from './components/phone-list-container/phone-list.component';
@@ -15,7 +16,8 @@ import { EffectsModule } from '@ngrx/effects';
   ],
   declarations: [
     PhoneListComponent,
-    PhoneDetailComponent],
+    PhoneDetailComponent,
+    SpinnerComponent],
   providers: []
 })
 export class PhonesModule {}
