@@ -1,0 +1,18 @@
+version: '2'
+services:
+  client:
+    container_name: 'client'
+    build: frontend
+    ports:
+      - '4200:4200'
+    volumes:
+      - './frontend:/home/app/client'
+    command: npm start
+  server:
+    container_name: 'server'
+    build: backend
+    ports:
+      - '4100:4100'
+    volumes:
+      - './backend:/home/app/server'
+    command: npm start
