@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { PhonesService } from './../services/phones.services';
+import { PhonesService } from './../services/phones.service';
 import { Injectable } from '@angular/core';
 import { Actions, Effect } from '@ngrx/effects';
 import * as phoneActions from './phone.actions';

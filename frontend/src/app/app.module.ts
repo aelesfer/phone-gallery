@@ -1,5 +1,6 @@
+import { AppRoutes } from './app.routes';
 import { SpinnerComponent } from './phones/components/spinner/spinner.component';
-import { PhonesService } from './phones/services/phones.services';
+import { PhonesService } from './phones/services/phones.service';
 import { PhoneStoreService } from './phones/services/phone-store.service';
 import { RouterModule } from '@angular/router';
 import { phoneReducerFactory } from './phones/store/phone.reducer';
@@ -8,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,9 @@ import { StoreModule } from '@ngrx/store';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     StoreModule.forRoot({phones: phoneReducerFactory}),
-    RouterModule.forRoot([
-      { path: 'phones', loadChildren: 'app/phones/phones.module#PhonesModule' },
-      { path: '', pathMatch: 'full', redirectTo: 'phones' }
-  ])
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [
     PhoneStoreService,
